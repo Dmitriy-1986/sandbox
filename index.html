@@ -29,6 +29,12 @@
 				display: inline-block;
 			}
 
+			.wrapper {
+				padding: 0;
+				margin: 0;
+				height: 100vh;
+			}
+
 			.section-outer {
 				padding: 0 20px;
 			}
@@ -41,17 +47,15 @@
 			.section-inner--wide {
 				max-width: 1200px;
 			}
-			/* === COMMON === */
 
-			.header__items {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				height: 100px;
-				font-size: 0;
+			.circle {
+				width: 20px;
+				height: 20px;
+				border-radius: 100%;
+				background-color: #25B0D8;
 			}
 
-			.logo {
+			.circle--big {
 				display: inline-block;
 				width: 40px;
 				height: 40px;
@@ -59,70 +63,117 @@
 				background-color: #25B0D8;
 			}
 
-			.nav__item-link {
+			.rectangle {
 				width: 80px;
 				height: 20px;
 				border-radius: 10px;
 				background-color: #FAD65C;
 			}
 
-			.header-item {
-				transition: .3s;
-			}
-
-			.header-item:hover {
-				margin: 0 7px;
-			}
-
-			.header-item + .header-item {
-				margin-left: 20px;
-			}
-
-			.social__item-link {
-				width: 20px;
-				height: 20px;
-				border-radius: 100%;
-				background-color: #25B0D8;
-			}
-
-			.btn {
+			.rectangle--big {
 				width: 120px;
 				height: 40px;
 				border-radius: 10px;
 				background-color: #E97774;
 			}
+			/* === COMMON === */
+
+			.menu__items {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				left: 50%;
+				transform: translate(-50%, 0);
+				width: 1200px;
+				height: 100px;
+				background-color: #13494B;
+				font-size: 0;
+			}
+
+			.header__items {
+				position: fixed;
+				top: 0;
+			}
+
+			.footer__items {
+				position: sticky;
+				bottom: 0;
+				transform: translate(0, 0);
+			}
+
+			.menu-item {
+				transition: .3s;
+			}
+
+			.menu-item:hover {
+				margin: 0 7px;
+			}
+
+			.menu-item + .menu-item {
+				margin-left: 20px;
+			}
 		</style>
 	</head>
 	<body>
+	<div class="wrapper">
 		<!-- HEADER -->
 		<header class="section-outer section-header">
 			<div class="section-inner section-inner--wide">
-				<div class="header__items">
-					<a class="logo header-item" href="#"></a>
+				<div class="menu__items header__items">
+					<a class="circle--big menu-item" href="#"></a>
 					<nav class="nav">
 						<ul class="nav__items">
-							<li class="nav__item header-item"><a class="nav__item-link" href="#"></a></li>
-							<li class="nav__item header-item"><a class="nav__item-link" href="#"></a></li>
-							<li class="nav__item header-item"><a class="nav__item-link" href="#"></a></li>
-							<li class="nav__item header-item"><a class="nav__item-link" href="#"></a></li>
+							<li class="nav__item menu-item"><a class="rectangle" href="#"></a></li>
+							<li class="nav__item menu-item"><a class="rectangle" href="#"></a></li>
+							<li class="nav__item menu-item"><a class="rectangle" href="#"></a></li>
+							<li class="nav__item menu-item"><a class="rectangle" href="#"></a></li>
 						</ul>
 					</nav>
 					<ul class="social__items">
-							<li class="social__item header-item"><a class="social__item-link" href="#"></a></li>
-							<li class="social__item header-item"><a class="social__item-link" href="#"></a></li>
-							<li class="social__item header-item"><a class="social__item-link" href="#"></a></li>
-							<li class="social__item header-item"><a class="social__item-link" href="#"></a></li>
+							<li class="social__item menu-item"><a class="circle" href="#"></a></li>
+							<li class="social__item menu-item"><a class="circle" href="#"></a></li>
+							<li class="social__item menu-item"><a class="circle" href="#"></a></li>
+							<li class="social__item menu-item"><a class="circle" href="#"></a></li>
 						</ul>
 					<div class="buttons">
-						<a class="btn header-item" href="#"></a>
-						<a class="btn header-item" href="#"></a>
+						<a class="rectangle--big menu-item" href="#"></a>
+						<a class="rectangle--big menu-item" href="#"></a>
 					</div>
 				</div>
 			</div>
 		</header>
 		<!-- / HEADER -->
+
+		<!-- FOOTER -->
+		<footer class="section-outer section-footer">
+			<div class="section-inner section-inner--wide">
+				<div class="menu__items footer__items">
+					<a class="circle--big menu-item" href="#"></a>
+					<nav class="nav">
+						<ul class="nav__items">
+							<li class="nav__item menu-item"><a class="rectangle" href="#"></a></li>
+							<li class="nav__item menu-item"><a class="rectangle" href="#"></a></li>
+							<li class="nav__item menu-item"><a class="rectangle" href="#"></a></li>
+							<li class="nav__item menu-item"><a class="rectangle" href="#"></a></li>
+						</ul>
+					</nav>
+					<ul class="social__items">
+							<li class="social__item menu-item"><a class="circle" href="#"></a></li>
+							<li class="social__item menu-item"><a class="circle" href="#"></a></li>
+							<li class="social__item menu-item"><a class="circle" href="#"></a></li>
+							<li class="social__item menu-item"><a class="circle" href="#"></a></li>
+						</ul>
+					<div class="buttons">
+						<a class="rectangle--big menu-item" href="#"></a>
+						<a class="rectangle--big menu-item" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- / FOOTER -->
+	</div>
 		<script>
-			alert("This is a sandbox repository, nothing special :-)");
+			alert("This is a sandbox repository, nothing special ^_^");
 		</script>
 	</body>
 </html>
